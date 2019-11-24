@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.userlist {
+  border: thin solid blue;
+  padding: 2rem;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.userlisttext {
+  position: relative;
+  top: -47px;
+  background: white;
+  padding: 7px;
+  width: 106px;
+  color: blue;
+}
+.marginTopSpace{
+    margin: 20px;
+}
