@@ -13,6 +13,7 @@
      new CleanWebpackPlugin(),
      new HtmlWebpackPlugin({
        title: 'Production',
+       template: './public/index.html'
      }),
    ],
    output: {
@@ -28,8 +29,8 @@
                },
                {
                     test: /\.css$/,
-                          exclude: /node_modules/,
-                          loaders: ['style-loader', 'css-loader'],
+                       //   exclude: /node_modules/,
+                          loaders: ['style-loader', 'css-loader', 'sass-loader'],
                }
            ],
        },
