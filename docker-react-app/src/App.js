@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import axios from 'axios';
 import DisplayUser from './DisplayUser';
+import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
 
 class App extends React.Component {
 
@@ -32,20 +34,26 @@ class App extends React.Component {
   const { user } = this.state;
 
   return (
-    <div className="App">
+    <div className="container-fluid">
       <header className="App-header">
-
         <p>
-          Users List
+          <i>Search User Details</i>
         </p>
       </header>
       <DisplayUser fetchData={this.onSubmit} clear={this.clear}/>
-      <div className="userlist">
-        <div><h1>First Name:</h1></div><div><h1> {user.fname}</h1></div>
-        <div><h1>Last Name: </h1></div><div><h1>{user.lname}</h1></div>
-      </div>
-
-
+        <div className="marginTopSpace">
+            <Card>
+              <Card.Header>User Details</Card.Header>
+              <Card.Body>
+                <Card style={{ width: '28rem' }}>
+                  <ListGroup variant="flush">
+                    <ListGroup.Item><b>First Name:</b> {user.fname}</ListGroup.Item>
+                    <ListGroup.Item><b>Last Name:</b> {user.lname}</ListGroup.Item>
+                  </ListGroup>
+                </Card>
+              </Card.Body>
+            </Card>
+        </div>
     </div>
   );
   }
